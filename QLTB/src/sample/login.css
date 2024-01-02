@@ -1,0 +1,22 @@
+.left-form {
+    -fx-background-image: url("/sample/image/BKHN.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.login-btn{
+    -fx-cursor: hand;
+    -fx-background-color:linear-gradient(to bottom right, #dec026,#4ede28);
+}
+.login-btn:hover{
+    -fx-background-color:linear-gradient(to bottom right, #12e7be,BF1C2AFF);
+}
+.login_close{
+    -fx-background-color:transparent;
+    -fx-cursor: hand;
+}
+.login_close:hover{
+   -fx-background-color: #ff534dff;
+}
+.right_form{
+    -fx-background-color:linear-gradient(to bottom right,#f8f5f5,#f58b9f) ;
+}

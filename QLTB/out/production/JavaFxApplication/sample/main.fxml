@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.0" prefWidth="1106.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mainControl">
+   <children>
+      <BorderPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <AnchorPane prefHeight="90.0" prefWidth="1106.0" styleClass="top_right" stylesheets="@main.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="90.0" prefWidth="137.0" styleClass="top_left" stylesheets="@main.css" />
+                  <Button fx:id="main_close" layoutX="1039.0" mnemonicParsing="false" onAction="#close_btn" prefHeight="33.0" prefWidth="67.0" styleClass="login_close" stylesheets="@main.css">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="CLOSE" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="main_minisize" layoutX="972.0" mnemonicParsing="false" onAction="#minisize" prefHeight="33.0" prefWidth="67.0" styleClass="login_close">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="MINUS" />
+                     </graphic>
+                  </Button>
+                  <Label layoutX="324.0" layoutY="33.0" text="QUẢN LÍ THIẾT BỊ HUST">
+                     <font>
+                        <Font name="Wide Latin" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="523.0" prefWidth="136.0" styleClass="white_bg" stylesheets="@main.css" BorderPane.alignment="CENTER">
+               <children>
+                  <FontAwesomeIcon glyphName="USER" layoutX="45.0" layoutY="65.0" size="5em" />
+                  <Label layoutX="41.0" layoutY="74.0" text="XIN CHÀO">
+                     <font>
+                        <Font name="Bell MT Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="main_user" layoutX="55.0" layoutY="95.0" text="USER" />
+                  <Line endX="53.0" layoutX="69.0" layoutY="122.0" startX="-56.5" />
+                  <MenuBar layoutX="10.0" layoutY="178.0" prefHeight="25.0" prefWidth="119.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="QL TÀI KHOẢN">
+                        <items>
+                          <MenuItem fx:id="main_menuThemTK" mnemonicParsing="false" onAction="#main_menuThemTK" text="Thêm tài khoản" />
+                              <MenuItem fx:id="main_menuXOATK" mnemonicParsing="false" onAction="#main_menuXoaTK" text="Xóa tài khoản" />
+                        </items>
+                      </Menu>
+                    </menus>
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="blu_bg" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MenuBar>
+                  <MenuBar layoutX="10.0" layoutY="225.0" prefHeight="25.0" prefWidth="119.0" stylesheets="@main.css">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="QL NHÂN VIÊN">
+                        <items>
+                          <MenuItem fx:id="main_menuTHEMNV" mnemonicParsing="false" onAction="#main_menuTHEMNV" text="Thêm nhân viên" />
+                              <MenuItem fx:id="main_menuSUANV" mnemonicParsing="false" onAction="#main_menuSUANV" text="Sửa thông tin" />
+                              <MenuItem fx:id="main_menuXOANV" mnemonicParsing="false" onAction="#main_menuXoaNV" text="Xóa nhân viên" />
+                        </items>
+                      </Menu>
+                    </menus>
+                     <styleClass>
+                        <String fx:value="blu_bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MenuBar>
+                  <MenuBar layoutX="10.0" layoutY="349.0" prefHeight="25.0" prefWidth="118.0" stylesheets="@main.css">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="KHÁC....">
+                           <items>
+                              <MenuItem fx:id="man_menuQLVT" mnemonicParsing="false" onAction="#Main_menuQLVT" text="vị trí" />
+                              <MenuItem fx:id="main_menuQLLTB" mnemonicParsing="false" onAction="#Main_menuQLLTB" text="Loại thiết bị" />
+                              <MenuItem fx:id="main_menuQLNCCNSX" mnemonicParsing="false" onAction="#Main_menuQLNCCNSX" text="Nhà cung cấp/sản xuất" />
+                           </items>
+                        </Menu>
+                     </menus>
+                     <styleClass>
+                        <String fx:value="blu_bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MenuBar>
+                  <MenuBar layoutX="10.0" layoutY="308.0" prefHeight="25.0" prefWidth="119.0" stylesheets="@main.css">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="QL MƯỢN / TRẢ">
+                           <items>
+                              <MenuItem fx:id="main_menuTaoPM" mnemonicParsing="false" onAction="#main_menuTAOPM" text="Tạo phiếu mượn" />
+                              <MenuItem fx:id="main_menuXOAPM" mnemonicParsing="false" onAction="#main_menuXOAPM" text="Xóa phiếu" />
+                              <MenuItem fx:id="main_menuSUAPM" mnemonicParsing="false" onAction="#main_menuSUAPM" text="Sửa phiếu" />
+                              <MenuItem fx:id="main_menuTHEMNM" mnemonicParsing="false" onAction="#main_menuTHEMNM" text="Thêm người mượn" />
+                              <MenuItem fx:id="main_menuXOANM" mnemonicParsing="false" onAction="#main_menuXOANM" text="Xóa người mượn" />
+                              <MenuItem fx:id="main_menuSUANM" mnemonicParsing="false" onAction="#main_menuSUANM" text="Sửa thông tin người mượn" />
+                              <MenuItem fx:id="main_menuMT" mnemonicParsing="false" onAction="#Main_menuMT" text="Mượn trả" />
+                           </items>
+                        </Menu>
+                     </menus>
+                     <styleClass>
+                        <String fx:value="blu_bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MenuBar>
+                  <Button fx:id="main_logoutbtn" layoutX="8.0" layoutY="458.0" mnemonicParsing="false" onAction="#logout_btn" prefHeight="38.0" prefWidth="55.0" stylesheets="@main.css">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="SIGN_OUT" size="2.5em" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="logout-btn" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="main_doimkbtn" layoutX="70.0" layoutY="458.0" mnemonicParsing="false" onAction="#main_doimkbtn" prefHeight="38.0" prefWidth="55.0" stylesheets="@main.css">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="LOCK" size="2.5em" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="logout-btn" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+                  <MenuBar layoutX="9.0" layoutY="266.0" prefHeight="25.0" prefWidth="119.0" stylesheets="@main.css">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="QL TB/NHẬP TB">
+                           <items>
+                              <MenuItem fx:id="main_menuTHEMTB" mnemonicParsing="false" onAction="#main_menuTHEMTB" text="Thêm thiết bị" />
+                              <MenuItem fx:id="main_menuSUATB" mnemonicParsing="false" onAction="#main_menuSUATB" text="Sửa thông tin" />
+                              <MenuItem fx:id="main_menuXOATB" mnemonicParsing="false" onAction="#main_menuXOATB" text="xóa thiết bị" />
+                              <MenuItem fx:id="main_menuTAOPN" mnemonicParsing="false" onAction="#Main_menuTAOPN" text="Tạo phiếu nhập" />
+                              <MenuItem fx:id="main_menuXOAPN" mnemonicParsing="false" onAction="#main_menuXOAPN" text="xóa phiếu nhập" />
+                              <MenuItem fx:id="main_menuSUAPN" mnemonicParsing="false" onAction="#main_menuSUAPN" text="Sửa Phiếu" />
+                           </items>
+                        </Menu>
+                     </menus>
+                     <styleClass>
+                        <String fx:value="blu_bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="form_QLTK" layoutX="14.0" layoutY="14.0" prefHeight="513.0" prefWidth="969.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="45.0" layoutY="15.0" prefHeight="484.0" prefWidth="356.0" stylesheets="@main.css">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="W_BG" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="9.0" layoutY="27.0" text="Tên tài khoản:">
+                                 <font>
+                                    <Font name="Arial Black" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="49.0" layoutY="80.0" text="Mật khẩu:">
+                                 <font>
+                                    <Font name="Arial Black" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="56.0" layoutY="127.0" text="Chức vụ:">
+                                 <font>
+                                    <Font name="Arial Black" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLTK_tftentk" layoutX="141.0" layoutY="24.0" prefHeight="25.0" prefWidth="207.0" styleClass="textfield" stylesheets="@main.css">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="QLTK_pfmk" layoutX="141.0" layoutY="77.0" prefHeight="25.0" prefWidth="207.0" styleClass="textfield" stylesheets="@main.css">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <ComboBox fx:id="QLTK_combochucvu" layoutX="141.0" layoutY="127.0" prefWidth="150.0" promptText="Chọn..." />
+                              <Button fx:id="QLTK_btnadd" layoutX="56.0" layoutY="242.0" mnemonicParsing="false" onAction="#QLTK_addbtn" prefHeight="48.0" prefWidth="257.0" styleClass="add_btn" stylesheets="@main.css" text="ADD" />
+                              <Button fx:id="QLTK_btndelete" layoutX="56.0" layoutY="319.0" mnemonicParsing="false" onAction="#QLTK_btndelete" prefHeight="48.0" prefWidth="257.0" styleClass="delete_btn" stylesheets="@main.css" text="DELETE" />
+                              <Button fx:id="QLTK_btnClear" layoutX="58.0" layoutY="405.0" mnemonicParsing="false" onAction="#QLTK_btnClear" prefHeight="48.0" prefWidth="253.0" styleClass="clear_btn" stylesheets="@main.css" text="CLEAR" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="453.0" layoutY="15.0" prefHeight="484.0" prefWidth="448.0" stylesheets="@main.css">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="W_BG" />
+                           </styleClass>
+                           <children>
+                              <TextField fx:id="QLTK_tftimkiem" layoutX="15.0" layoutY="14.0" prefHeight="36.0" prefWidth="175.0" promptText="Nhập tên tài khoản" styleClass="textfield" stylesheets="@main.css" />
+                              <Button fx:id="QLTK_btntimkiem" layoutX="189.0" layoutY="12.0" mnemonicParsing="false" onAction="#QLTK_btnTimkiem" prefHeight="35.0" prefWidth="52.0" styleClass="search_btn" stylesheets="@main.css">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="SEARCH" size="1.5em" />
+                                 </graphic>
+                              </Button>
+                              <TableView fx:id="QLTK_tableview" layoutX="16.0" layoutY="63.0" onMouseClicked="#taikhoanSlect" prefHeight="401.0" prefWidth="423.0" styleClass="table_view" stylesheets="@main.css">
+                                <columns>
+                                  <TableColumn fx:id="QLTK_ColTk" prefWidth="147.0" text="Tài khoản" />
+                                  <TableColumn fx:id="QLTK_ColMk" prefWidth="157.0" text="Mật khẩu" />
+                                    <TableColumn fx:id="QLTK_ColChucVu" prefWidth="118.0" text="Chức vụ" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="form_QLNV" layoutX="10.0" layoutY="10.0" prefHeight="513.0" prefWidth="969.0" visible="false">
+                     <children>
+                        <AnchorPane layoutX="45.0" layoutY="15.0" prefHeight="484.0" prefWidth="356.0" stylesheets="@main.css">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="W_BG" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="31.0" layoutY="27.0" text="Mã nhân viên:">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="80.0" layoutY="107.0" text="CCCD:">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLNV_tfManv" layoutX="141.0" layoutY="24.0" prefHeight="17.0" prefWidth="207.0" styleClass="textfield" stylesheets="@main.css">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="QLNV_hoTen" layoutX="141.0" layoutY="63.0" prefHeight="25.0" prefWidth="207.0" styleClass="textfield" stylesheets="@main.css">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="QLNV_addbtn" layoutX="50.0" layoutY="251.0" mnemonicParsing="false" onAction="#QLNV_addbtn" prefHeight="48.0" prefWidth="257.0" styleClass="add_btn" stylesheets="@main.css" text="ADD" />
+                              <Button fx:id="QLNV_deletebtn" layoutX="50.0" layoutY="310.0" mnemonicParsing="false" onAction="#QLNV_deletebtn" prefHeight="48.0" prefWidth="257.0" styleClass="delete_btn" stylesheets="@main.css" text="DELETE" />
+                              <Button fx:id="QLNV_updatebtn" layoutX="50.0" layoutY="368.0" mnemonicParsing="false" onAction="#QLNV_update" prefHeight="48.0" prefWidth="257.0" styleClass="update_btn" stylesheets="@main.css" text="UPDATE" />
+                              <Button fx:id="QLNV_clearbtn" layoutX="52.0" layoutY="422.0" mnemonicParsing="false" onAction="#QLNV_clearbtn" prefHeight="48.0" prefWidth="253.0" styleClass="clear_btn" stylesheets="@main.css" text="CLEAR" />
+                              <Label layoutX="77.0" layoutY="68.0" text="Họ tên:">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLNV_CCCD" layoutX="141.0" layoutY="103.0" prefHeight="25.0" prefWidth="207.0" styleClass="textfield" stylesheets="@main.css">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="18.0" layoutY="152.0" text="Ngày công tác:">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLNV_ngaycongtac" layoutX="141.0" layoutY="147.0" prefHeight="25.0" prefWidth="207.0" promptText="yyyy-mm-dd" styleClass="textfield" stylesheets="@main.css">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="80.0" layoutY="188.0" text="Email:">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLNV_email" layoutX="141.0" layoutY="183.0" prefHeight="25.0" prefWidth="207.0" styleClass="textfield" stylesheets="@main.css">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="413.0" layoutY="15.0" prefHeight="484.0" prefWidth="541.0" stylesheets="@main.css">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="W_BG" />
+                           </styleClass>
+                           <children>
+                              <TextField fx:id="QLNV_tftimkiem" layoutX="15.0" layoutY="14.0" prefHeight="36.0" prefWidth="175.0" promptText="Điền mã nhân viên" styleClass="textfield" stylesheets="@main.css" />
+                              <Button fx:id="QLNV_timkiembtn" layoutX="205.0" layoutY="14.0" mnemonicParsing="false" onAction="#QLNV_timkiembtn" prefHeight="35.0" prefWidth="52.0" styleClass="search_btn" stylesheets="@main.css">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="SEARCH" size="1.5em" />
+                                 </graphic>
+                              </Button>
+                              <TableView fx:id="QLNV_tableView" layoutX="16.0" layoutY="63.0" onMouseClicked="#nhanvienSelect" prefHeight="401.0" prefWidth="525.0" styleClass="table_view" stylesheets="@main.css">
+                                 <columns>
+                                    <TableColumn fx:id="QLNV_colMaNv" prefWidth="84.0" text="Mã nhân viên" />
+                                    <TableColumn fx:id="QLNV_colHoTen" prefWidth="107.0" text="Họ tên" />
+                                    <TableColumn fx:id="QLNV_colCCCD" minWidth="0.0" prefWidth="113.0" text="CCCD" />
+                                    <TableColumn fx:id="QLNV_colEmail" minWidth="0.0" prefWidth="112.0" text="Email" />
+                                    <TableColumn fx:id="QLNV_colNgaycongtac" minWidth="0.0" prefWidth="107.0" text="Ngày công tác" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="form_QLTB" layoutX="14.0" layoutY="14.0" prefHeight="523.0" prefWidth="979.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane fx:id="QLTB_NhapTB_form" layoutX="11.0" layoutY="14.0" prefHeight="495.0" prefWidth="615.0" stylesheets="@main.css">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="W_BG" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="30.0" layoutY="13.0" text="Mã thiết bị:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLTB_NhapTB_tfmatb" layoutX="108.0" layoutY="10.0" prefHeight="25.0" prefWidth="83.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="29.0" layoutY="44.0" text="Tên thiết bị:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLTB_NhapTB_tftentb" layoutX="109.0" layoutY="41.0" prefHeight="25.0" prefWidth="175.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="17.0" layoutY="76.0" text="Năm sản xuất:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLTB_NhapTB_tfnamsx" layoutX="109.0" layoutY="73.0" prefHeight="25.0" prefWidth="81.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="35.0" layoutY="107.0" text="Mã loại TB:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="QLTB_NhapTB_MaloaiTB" layoutX="109.0" layoutY="104.0" prefHeight="25.0" prefWidth="143.0" promptText="Chọn mã..." styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="19.0" layoutY="138.0" text="Nhà sản xuất:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="QLTB_NhapTB_MaNSX" layoutX="109.0" layoutY="135.0" prefHeight="25.0" prefWidth="143.0" promptText="Chọn mã..." styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="63.0" layoutY="168.0" text="Vị trí:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="QLTB_NhapTB_maVT" layoutX="109.0" layoutY="165.0" prefHeight="25.0" prefWidth="143.0" promptText="Chọn mã ..." styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="24.0" layoutY="199.0" text="Phiếu nhập:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="QLTB_NhapTB_maPN" layoutX="109.0" layoutY="196.0" prefHeight="25.0" prefWidth="143.0" promptText="Chọn mã ..." styleClass="textfield" stylesheets="@main.css" />
+                              <Line endX="322.0" layoutX="274.0" layoutY="232.0" startX="-260.0" />
+                              <Label layoutX="347.0" layoutY="8.0" text="Tình trạng:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="QLTB_NhapTB_tinhtrangTB" layoutX="417.0" layoutY="5.0" prefHeight="25.0" prefWidth="104.0" promptText="hỏng/tốt" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="372.0" layoutY="39.0" text="Mô tả:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="QLTB_NhapTB_addTBbtn" layoutX="372.0" layoutY="158.0" mnemonicParsing="false" onAction="#QLTB_NhapTB_addbtn" prefHeight="34.0" prefWidth="75.0" styleClass="add_btn" stylesheets="@main.css" text="ADD" />
+                              <Button fx:id="QLTB_NhapTB_clearTBbtn" layoutX="499.0" layoutY="159.0" mnemonicParsing="false" onAction="#QLTB_NhapTB_clearTBbtn" prefHeight="32.0" prefWidth="66.0" styleClass="clear_btn" stylesheets="@main.css" text="CLEAR" />
+                              <Button fx:id="QLTB_NhapTB_deleteTBbtn" layoutX="372.0" layoutY="197.0" mnemonicParsing="false" onAction="#QLTB_NhapTB_deleteTBbtn" prefHeight="29.0" prefWidth="75.0" styleClass="delete_btn" stylesheets="@main.css" text="DELETE" />
+                              <Button fx:id="QLTB_NhapTB_updateTBbtn" layoutX="500.0" layoutY="196.0" mnemonicParsing="false" onAction="#QLTB_NhapTB_updateTBbtn" prefHeight="30.0" prefWidth="65.0" styleClass="update_btn" stylesheets="@main.css" text="UPDATE" />
+                              <TableView fx:id="QLTB_NhapTB_tablevoew" layoutX="-1.0" layoutY="289.0" onMouseClicked="#TBTableselect" prefHeight="207.0" prefWidth="615.0" styleClass="table_view" stylesheets="@main.css">
+                                <columns>
+                                  <TableColumn fx:id="QLTB_NhapTB_colMaTB" prefWidth="55.0" text="Mã TB" />
+                                  <TableColumn fx:id="QLTB_NhapTB_colTenTB" prefWidth="76.0" text="Tên" />
+                                    <TableColumn fx:id="QLTB_NhapTB_colNamsxTB" prefWidth="54.0" text="Năm SX" />
+                                    <TableColumn fx:id="QLTB_NhapTB_colMaLoaiTB" prefWidth="70.0" text="Mã loại" />
+                                    <TableColumn fx:id="QLTB_NhapTB_colMaNSX" prefWidth="68.0" text="Ma NSX" />
+                                    <TableColumn fx:id="QLTB_NhapTB_colVT" prefWidth="60.0" text="Vị trí" />
+                                    <TableColumn fx:id="QLTB_NhapTB_colPN" text="Phiếu nhập" />
+                                    <TableColumn fx:id="QLTB_NhapTB_colTinhtrang" prefWidth="72.0" text="Tình trạng" />
+                                    <TableColumn fx:id="QLTB_NhapTB_colmota" prefWidth="79.0" text="Mô tả" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="QLTB_NhapTB_tftimkiemTB" layoutX="69.0" layoutY="246.0" prefHeight="25.0" prefWidth="175.0" styleClass="textfield" stylesheets="@main.css" />
+                              <ComboBox fx:id="QLTB_NhapTB_tfkieutimkiem" layoutX="256.0" layoutY="246.0" prefHeight="27.0" prefWidth="128.0" promptText="Kiểu tìm kiếm" styleClass="textfield" stylesheets="@main.css" />
+                              <Button fx:id="QLTB_NhapTB_timkiembtn" layoutX="12.0" layoutY="242.0" mnemonicParsing="false" onAction="#QLTB_NhapTB_timkiembtn" prefHeight="37.0" prefWidth="52.0" styleClass="search_btn" stylesheets="@main.css">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="SEARCH" size="1.5em" />
+                                 </graphic>
+                              </Button>
+                              <TextArea fx:id="QLTB_NhapTB_tfmota" layoutX="378.0" layoutY="61.0" prefHeight="92.0" prefWidth="200.0" styleClass="textfield" stylesheets="@main.css" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="QLPN_form" layoutX="642.0" layoutY="14.0" prefHeight="494.0" prefWidth="317.0" stylesheets="@main.css">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="W_BG" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="14.0" layoutY="20.0" text="Mã phiếu nhâp:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLPN_tfmaPN" layoutX="111.0" layoutY="17.0" prefHeight="25.0" prefWidth="101.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="41.0" layoutY="61.0" text="Người lập:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLPN_tfnhanvienlap" layoutX="110.0" layoutY="58.0" prefHeight="25.0" prefWidth="148.0" promptText="Mã nhân viên lập" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="18.0" layoutY="100.0" text="Nhà cung cấp:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="QLPN_Nhacungcap" layoutX="110.0" layoutY="97.0" prefHeight="25.0" prefWidth="104.0" promptText="Chọn mã..." styleClass="textfield" stylesheets="@main.css" />
+                              <Button fx:id="QLPN_addbtn" layoutX="67.0" layoutY="154.0" mnemonicParsing="false" onAction="#QLPN_addbtn" prefHeight="34.0" prefWidth="75.0" styleClass="add_btn" stylesheets="@main.css" text="ADD" />
+                              <Button fx:id="QLPN_clearbtn" layoutX="194.0" layoutY="155.0" mnemonicParsing="false" onAction="#QLPN_clearbtn" prefHeight="32.0" prefWidth="66.0" styleClass="clear_btn" stylesheets="@main.css" text="CLEAR" />
+                              <Button fx:id="QLPN_deletebtn" layoutX="67.0" layoutY="193.0" mnemonicParsing="false" onAction="#QLPN_deletebtn" prefHeight="29.0" prefWidth="75.0" styleClass="delete_btn" stylesheets="@main.css" text="DELETE" />
+                              <Button fx:id="QLPN_updatebtn" layoutX="195.0" layoutY="192.0" mnemonicParsing="false" onAction="#QLPN_updatebtn" prefHeight="30.0" prefWidth="65.0" styleClass="update_btn" stylesheets="@main.css" text="UPDATE" />
+                              <Line endX="112.0" layoutX="162.0" layoutY="232.0" startX="-120.0" />
+                              <TableView fx:id="QLPN_tableview" layoutY="294.0" onMouseClicked="#PhieunhapTableselect" prefHeight="200.0" prefWidth="316.0" styleClass="table_view" stylesheets="@main.css">
+                                <columns>
+                                  <TableColumn fx:id="QLPN_colmaPN" prefWidth="71.0" text="Mã phiếu nhập" />
+                                  <TableColumn fx:id="QLPN_colmaNV" prefWidth="79.0" text="Mã NV" />
+                                    <TableColumn fx:id="QLPN_colNCC" prefWidth="87.0" text="Mã NCC" />
+                                    <TableColumn fx:id="QLPN_coldate" prefWidth="78.0" text="Date" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="QLPN_tftimkiem" layoutX="65.0" layoutY="249.0" prefHeight="25.0" prefWidth="175.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Button fx:id="QLPN_timkiembtn" layoutX="9.0" layoutY="244.0" mnemonicParsing="false" onAction="#QLPN_timkiembtn" prefHeight="37.0" prefWidth="52.0" styleClass="search_btn" stylesheets="@main.css">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="SEARCH" size="1.5em" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="form_QLNMPM" layoutX="14.0" layoutY="14.0" prefHeight="523.0" prefWidth="979.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane fx:id="QLNM_form" layoutX="14.0" layoutY="14.0" prefHeight="497.0" prefWidth="437.0" stylesheets="@main.css">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="W_BG" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="21.0" layoutY="18.0" text="Mã người mượn:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLNM_tfmanm" layoutX="142.0" layoutY="16.0" prefHeight="25.0" prefWidth="113.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="77.0" layoutY="52.0" text="Họ Tên:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLNM_tfhoten" layoutX="142.0" layoutY="50.0" prefHeight="25.0" prefWidth="219.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="59.0" layoutY="84.0" text="Khoa viện:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLNM_tfkhoavien" layoutX="142.0" layoutY="82.0" prefHeight="25.0" prefWidth="219.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="59.0" layoutY="113.0" text="Chức vụ:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLNM_tfchucvu" layoutX="142.0" layoutY="111.0" prefHeight="25.0" prefWidth="219.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="74.0" layoutY="143.0" text="Email:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLNM_tfemail" layoutX="142.0" layoutY="141.0" prefHeight="25.0" prefWidth="219.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Button fx:id="QLNM_addbtn" layoutX="34.0" layoutY="192.0" mnemonicParsing="false" onAction="#QLNM_addbtn" prefHeight="35.0" prefWidth="59.0" styleClass="add_btn" stylesheets="@main.css" text="ADD" />
+                              <Button fx:id="QLNM_deletebtn" layoutX="129.0" layoutY="192.0" mnemonicParsing="false" onAction="#QLNM_deletebtn" prefHeight="34.0" prefWidth="59.0" styleClass="delete_btn" stylesheets="@main.css" text="DELETE" />
+                              <Button fx:id="QLNM_clearbtn" layoutX="230.0" layoutY="192.0" mnemonicParsing="false" onAction="#QLNM_clearbtn" prefHeight="35.0" prefWidth="61.0" styleClass="clear_btn" stylesheets="@main.css" text="CLEAR" />
+                              <Button fx:id="QLNM_updatebtn" layoutX="333.0" layoutY="192.0" mnemonicParsing="false" onAction="#QLNM_updatebtn" prefHeight="34.0" prefWidth="61.0" styleClass="update_btn" stylesheets="@main.css" text="UPDATE" />
+                              <Line endX="268.0" layoutX="132.0" layoutY="243.0" startX="-100.0" />
+                              <TableView fx:id="QLNM_tableview" layoutX="9.0" layoutY="295.0" onMouseClicked="#NMTableselect" prefHeight="188.0" prefWidth="418.0" styleClass="table_view" stylesheets="@main.css">
+                                <columns>
+                                  <TableColumn fx:id="QLNM_colManm" prefWidth="65.0" text="Mã người mượn" />
+                                  <TableColumn fx:id="QLNM_colHoten" prefWidth="85.0" text="Họ tên" />
+                                    <TableColumn fx:id="QLNM_colKhoavien" prefWidth="94.0" text="Khoa viện" />
+                                    <TableColumn fx:id="QLNM_colChucvu" prefWidth="65.0" text="Chức vụ" />
+                                    <TableColumn fx:id="QLNM_colEmail" prefWidth="108.0" text="Email" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="QLPM_form" layoutX="500.0" layoutY="13.0" prefHeight="497.0" prefWidth="437.0" stylesheets="@main.css">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="W_BG" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="21.0" layoutY="18.0" text="Mã phiếu mượn:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLPM_tfmapm" layoutX="142.0" layoutY="16.0" prefHeight="25.0" prefWidth="113.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="69.0" layoutY="52.0" text="Ngày trả:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLPM_tfngaytra" layoutX="142.0" layoutY="50.0" prefHeight="25.0" prefWidth="219.0" promptText="yyyy-mm-dd" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="43.0" layoutY="84.0" text="Người mượn:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLPM_tfmanm" layoutX="142.0" layoutY="82.0" prefHeight="25.0" prefWidth="112.0" promptText="Mã người mượn" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="59.0" layoutY="119.0" text="Nhân viên:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="QLPM_addbtn" layoutX="34.0" layoutY="192.0" mnemonicParsing="false" onAction="#QLPM_addbtn" prefHeight="35.0" prefWidth="59.0" styleClass="add_btn" stylesheets="@main.css" text="ADD" />
+                              <Button fx:id="QLPM_deletebtn" layoutX="129.0" layoutY="192.0" mnemonicParsing="false" onAction="#QLPM_deletebtn" prefHeight="34.0" prefWidth="59.0" styleClass="delete_btn" stylesheets="@main.css" text="DELETE" />
+                              <Button fx:id="QLPM_cleabtn" layoutX="230.0" layoutY="192.0" mnemonicParsing="false" onAction="#QLPM_clearbtn" prefHeight="35.0" prefWidth="61.0" styleClass="clear_btn" stylesheets="@main.css" text="CLEAR" />
+                              <Button fx:id="QLPM_updatebtn" layoutX="333.0" layoutY="192.0" mnemonicParsing="false" onAction="#QLPM_updatebtn" prefHeight="34.0" prefWidth="61.0" styleClass="update_btn" stylesheets="@main.css" text="UPDATE" />
+                              <Line endX="268.0" layoutX="132.0" layoutY="243.0" startX="-100.0" />
+                              <TableView fx:id="QLPM_tableview" layoutX="9.0" layoutY="295.0" onMouseClicked="#PMTableselect" prefHeight="188.0" prefWidth="418.0" styleClass="table_view" stylesheets="@main.css">
+                                 <columns>
+                                    <TableColumn fx:id="QLPM_colmapm" prefWidth="75.0" text="Mã phiếu mượn" />
+                                    <TableColumn fx:id="QLPM_colmanm" prefWidth="83.0" text="Người mượn" />
+                                    <TableColumn fx:id="QLPM_colnhsnvien" prefWidth="83.0" text="Nhân viên" />
+                                    <TableColumn fx:id="QLPM_colngaymuon" text="Ngày mượn" />
+                                    <TableColumn fx:id="QLPM_colngaytra" prefWidth="95.0" text="Ngày trả" />
+                                 </columns>
+                              </TableView>
+                              <ComboBox fx:id="QLPM_tfnhanvien" layoutX="144.0" layoutY="115.0" prefWidth="150.0" styleClass="textfield" stylesheets="@main.css" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="form_QLMT" layoutX="14.0" layoutY="14.0" prefHeight="523.0" prefWidth="979.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="493.0" prefWidth="430.0" stylesheets="@main.css">
+                           <styleClass>
+                              <String fx:value="W_BG" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="14.0" layoutY="28.0" text="Danh sách thiết bị có thể mượn">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="QLM_tableview" layoutX="14.0" layoutY="70.0" onMouseClicked="#TBcothemuonTableselect" prefHeight="255.0" prefWidth="394.0" styleClass="table_view" stylesheets="@main.css">
+                                <columns>
+                                  <TableColumn fx:id="QLM_colmatb" prefWidth="75.0" text="Mã thiết bị" />
+                                  <TableColumn fx:id="QLM_coltentb" prefWidth="110.0" text="Tên thiết bị" />
+                                    <TableColumn fx:id="QLM_colloaiTB" prefWidth="128.0" text="Loại thiết bị" />
+                                    <TableColumn fx:id="QLM_coltinhtrang" text="Tình trạng" />
+                                </columns>
+                              </TableView>
+                              <ComboBox fx:id="QLM_comboPM" layoutX="14.0" layoutY="352.0" prefWidth="150.0" promptText="Chọn phiếu" styleClass="textfield" stylesheets="@main.css" />
+                              <TextField fx:id="QLM_tfmatbmuon" layoutX="15.0" layoutY="386.0" prefHeight="25.0" prefWidth="180.0" promptText="Điền mã thiết bị muốn mượn" styleClass="textfield" stylesheets="@main.css" />
+                              <Button fx:id="QLM_muonbtn" layoutX="293.0" layoutY="357.0" mnemonicParsing="false" onAction="#QLM_muonbtn" prefHeight="60.0" prefWidth="78.0" styleClass="update_btn" stylesheets="@main.css" text="Mượn" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="511.0" layoutY="14.0" prefHeight="493.0" prefWidth="421.0" stylesheets="@main.css">
+                           <styleClass>
+                              <String fx:value="W_BG" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="24.0" layoutY="25.0" text="Danh sách thiết bị thuộc phiếu">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="QLT_tableview" layoutX="14.0" layoutY="63.0" onMouseClicked="#TBTRONGPHIEUTableselect" prefHeight="261.0" prefWidth="387.0" styleClass="table_view" stylesheets="@main.css">
+                                 <columns>
+                                    <TableColumn fx:id="QLT_colmatb" prefWidth="75.0" text="Mã thiết bị" />
+                                    <TableColumn fx:id="QLT_coltentb" prefWidth="110.0" text="Tên thiết bị" />
+                                    <TableColumn fx:id="QLT_colngaytra" prefWidth="102.0" text="Ngày trả" />
+                                    <TableColumn fx:id="QLT_colTrangthai" prefWidth="106.0" text="Trạng thái" />
+                                 </columns>
+                              </TableView>
+                              <ComboBox fx:id="QLT_combomaPM" layoutX="16.0" layoutY="347.0" onAction="#display_listTBtrongphieu" prefWidth="150.0" promptText="Chọn phiếu" styleClass="textfield" stylesheets="@main.css" />
+                              <TextField fx:id="QLT_tfmatb" layoutX="17.0" layoutY="381.0" prefHeight="25.0" prefWidth="180.0" promptText="Điền mã thiết bị muốn trả" styleClass="textfield" stylesheets="@main.css" />
+                              <Button fx:id="QLT_trabtn" layoutX="295.0" layoutY="352.0" mnemonicParsing="false" onAction="#QLT_trabtn" prefHeight="60.0" prefWidth="78.0" styleClass="clear_btn" stylesheets="@main.css" text="Trả" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="form_QLKHAC" layoutX="14.0" layoutY="14.0" prefHeight="523.0" prefWidth="979.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane fx:id="QLVT_form" layoutX="14.0" layoutY="16.0" prefHeight="491.0" prefWidth="286.0" stylesheets="@main.css">
+                           <children>
+                              <Label layoutX="23.0" layoutY="12.0" text="Mã vị trí">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="4.0" layoutY="47.0" text="Nhân viên quản lí">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLVT_tfmavt" layoutX="129.0" layoutY="10.0" styleClass="textfield" stylesheets="@main.css" />
+                              <ComboBox fx:id="QLVT_manv" layoutX="129.0" layoutY="45.0" prefWidth="150.0" promptText="Chọn mã.." styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="22.0" layoutY="86.0" text="Tên vị trí">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLVT_tftenVT" layoutX="129.0" layoutY="84.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="22.0" layoutY="117.0" text="Mô tả">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="QLVT_tableview" layoutX="4.0" layoutY="197.0" onMouseClicked="#vitriTableselect" prefHeight="200.0" prefWidth="277.0" styleClass="table_view" stylesheets="@main.css">
+                                <columns>
+                                  <TableColumn fx:id="QLVT_colmaxvt" prefWidth="64.0" text="Mã vị trí" />
+                                  <TableColumn fx:id="QLVT_colten" prefWidth="52.0" text="Tên" />
+                                    <TableColumn fx:id="QLVT_colnhanvien" prefWidth="70.0" text="Nhân viên" />
+                                    <TableColumn fx:id="QLVT_colmota" prefWidth="99.0" text="Mô tả" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="QLVT_addbtn" layoutX="14.0" layoutY="420.0" mnemonicParsing="false" onAction="#QLVT_addbtn" styleClass="add_btn" stylesheets="@main.css" text="ADD" />
+                              <Button fx:id="QLVT_deletebtn" layoutX="80.0" layoutY="420.0" mnemonicParsing="false" onAction="#QLVT_deletebtn" styleClass="delete_btn" stylesheets="@main.css" text="DELETE" />
+                              <Button fx:id="QLVT_updatebtn" layoutX="143.0" layoutY="420.0" mnemonicParsing="false" onAction="#QLVT_updatebtn" styleClass="update_btn" stylesheets="@main.css" text="UPDATE" />
+                              <Button fx:id="QLVT_clearbtn" layoutX="220.0" layoutY="420.0" mnemonicParsing="false" onAction="#QLVT_clearbtn" styleClass="clear_btn" stylesheets="@main.css" text="CLEAR" />
+                              <TextArea fx:id="QLVT_tfmota" layoutX="128.0" layoutY="117.0" prefHeight="76.0" prefWidth="148.0" styleClass="textfield" stylesheets="@main.css" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="W_BG" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </AnchorPane>
+                        <AnchorPane fx:id="QLLTB_form" layoutX="319.0" layoutY="18.0" prefHeight="491.0" prefWidth="309.0" stylesheets="@main.css">
+                           <children>
+                              <Label layoutX="45.0" layoutY="16.0" text="Mã loại thiết bị">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLLTB_tfma" layoutX="151.0" layoutY="14.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="45.0" layoutY="52.0" text="Tên loại thiết bị">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLLTB_tften" layoutX="152.0" layoutY="50.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="45.0" layoutY="83.0" text="Mô tả">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="QLLTB_table" layoutX="16.0" layoutY="197.0" onMouseClicked="#LoaiTBSelect" prefHeight="200.0" prefWidth="277.0" styleClass="table_view" stylesheets="@main.css">
+                                 <columns>
+                                    <TableColumn fx:id="QLLTB_colma" prefWidth="76.0" text="Mã thiết bị" />
+                                    <TableColumn fx:id="QLLTB_colten" prefWidth="90.0" text=" Tên thiết bị" />
+                                    <TableColumn fx:id="QLLTB_colmota" prefWidth="109.0" text="Mô tả" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="QLLTB_addbtn" layoutX="28.0" layoutY="418.0" mnemonicParsing="false" onAction="#QLLTB_addbtn" styleClass="add_btn" stylesheets="@main.css" text="ADD" />
+                              <Button fx:id="QLLTB_deletebtn" layoutX="94.0" layoutY="418.0" mnemonicParsing="false" onAction="#QLLTB_deletebtn" styleClass="delete_btn" stylesheets="@main.css" text="DELETE" />
+                              <Button fx:id="QLLTB_updatebtn" layoutX="157.0" layoutY="418.0" mnemonicParsing="false" onAction="#QLLTB_updatebtn" styleClass="update_btn" stylesheets="@main.css" text="UPDATE" />
+                              <Button fx:id="QLLTB_clearbtn" layoutX="234.0" layoutY="418.0" mnemonicParsing="false" onAction="#QLLTB_clearbtn" styleClass="clear_btn" stylesheets="@main.css" text="CLEAR" />
+                              <TextArea fx:id="QLLTB_tfmota" layoutX="151.0" layoutY="83.0" prefHeight="89.0" prefWidth="151.0" styleClass="textfield" stylesheets="@main.css" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="W_BG" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </AnchorPane>
+                        <AnchorPane fx:id="QLNCCSX_form" layoutX="640.0" layoutY="16.0" prefHeight="491.0" prefWidth="311.0" stylesheets="@main.css">
+                           <children>
+                              <Label layoutX="75.0" layoutY="16.0" text="Mã ">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLNCCSX_tfma" layoutX="108.0" layoutY="14.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="75.0" layoutY="46.0" text="Tên">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLNCCSX_tften" layoutX="109.0" layoutY="44.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="52.0" layoutY="79.0" text="Địa chỉ">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="QLNCCSX_tfdiachi" layoutX="110.0" layoutY="81.0" prefHeight="58.0" prefWidth="150.0" styleClass="textfield" stylesheets="@main.css" />
+                              <Label layoutX="61.0" layoutY="147.0" text="SDT">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="QLNCCSX_tfsdt" layoutX="108.0" layoutY="145.0" styleClass="textfield" stylesheets="@main.css" />
+                              <TableView fx:id="QLNCCSX_table" layoutX="2.0" layoutY="231.0" onMouseClicked="#NCCSX_select" prefHeight="200.0" prefWidth="307.0" styleClass="table_view" stylesheets="@main.css">
+                                 <columns>
+                                    <TableColumn fx:id="QLNCCSX_colma" prefWidth="55.0" text="Mã" />
+                                    <TableColumn fx:id="QLNCCSX_colten" prefWidth="76.0" text="Tên" />
+                                    <TableColumn fx:id="QLNCCSX_colSDT" prefWidth="90.0" text="SDT" />
+                                    <TableColumn fx:id="QLNCCSX_coldiachi" prefWidth="84.0" text="Địa chỉ" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="QLNCCSX_addbtn" layoutX="26.0" layoutY="452.0" mnemonicParsing="false" onAction="#QLNCCSX_addbtn" styleClass="add_btn" stylesheets="@main.css" text="ADD" />
+                              <Button fx:id="QLNCCSX_deletebtn" layoutX="92.0" layoutY="452.0" mnemonicParsing="false" onAction="#QLNCCSX_deletebtn" styleClass="delete_btn" stylesheets="@main.css" text="DELETE" />
+                              <Button fx:id="QLNCCSX_updatebtn" layoutX="155.0" layoutY="452.0" mnemonicParsing="false" onAction="#QNCCSX_updatebtn" styleClass="update_btn" stylesheets="@main.css" text="UPDATE" />
+                              <Button fx:id="QLNCCSX_clearbtn" layoutX="232.0" layoutY="452.0" mnemonicParsing="false" onAction="#QLNCCSX_clearbtn" styleClass="clear_btn" stylesheets="@main.css" text="CLEAR" />
+                              <ComboBox fx:id="QLNCCSX_comboloai" layoutX="161.0" layoutY="184.0" onAction="#display_listNCCSX" prefHeight="25.0" prefWidth="96.0" promptText="NSX/NCC" styleClass="textfield" stylesheets="@main.css" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="W_BG" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="form_DOIMK" layoutX="5.0" prefHeight="523.0" prefWidth="979.0" styleClass="center" stylesheets="@main.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="201.0" layoutY="62.0" prefHeight="359.0" prefWidth="506.0" styleClass="textfield" stylesheets="@main.css">
+                           <children>
+                              <Label layoutX="182.0" layoutY="25.0" text="Đổi mật khẩu">
+                                 <font>
+                                    <Font name="Cambria Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="64.0" layoutY="81.0" text="Tên tài khoản">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="DMK_tentk" layoutX="182.0" layoutY="79.0" onAction="#displaytaikhoan" prefHeight="31.0" prefWidth="228.0" styleClass="textfield" stylesheets="@main.css">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="33.0" layoutY="118.0" text="Mật khẩu hiện tại">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="DMK_matkhauht" layoutX="182.0" layoutY="118.0" prefHeight="31.0" prefWidth="228.0" styleClass="textfield" stylesheets="@main.css">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="63.0" layoutY="166.0" text="Mật khẩu mới">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="DMK_mkmoi" layoutX="182.0" layoutY="164.0" prefHeight="31.0" prefWidth="229.0" styleClass="textfield" stylesheets="@main.css">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </PasswordField>
+                              <Label layoutX="21.0" layoutY="218.0" text="Xác nhận mật khẩu">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="DMK_xacnhanmk" layoutX="182.0" layoutY="216.0" prefHeight="31.0" prefWidth="229.0" styleClass="textfield" stylesheets="@main.css">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </PasswordField>
+                              <Button fx:id="DMK_doibtn" layoutX="255.0" layoutY="272.0" mnemonicParsing="false" onAction="#DMK_doibtn" prefHeight="39.0" prefWidth="83.0" styleClass="update_btn" stylesheets="@main.css" text="ĐỔI" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="form_background" layoutX="46.0" layoutY="29.0" prefHeight="523.0" prefWidth="979.0" styleClass="center" stylesheets="@main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

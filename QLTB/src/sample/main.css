@@ -1,0 +1,114 @@
+.shadow{
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,.5), 6,0,0,0);
+}
+.white_bg{
+    -fx-background-color:linear-gradient(to bottom right,#f8f5f5,#f58b9f);
+
+}
+.top_left{
+    -fx-background-image:url("/sample/image/1200px-Logo_Đại_học_Bách_Khoa_Hà_Nội.svg.png");
+    -fx-background-size: 100% 100%;
+}
+.top_right{
+    -fx-background-color:linear-gradient(to bottom right,#f8f5f5,#f58b9f);
+}
+.login_close{
+     -fx-background-color:transparent;
+     -fx-cursor: hand;
+ }
+.login_close:hover{
+    -fx-background-color: #05d7aa;
+}
+.textfield{
+    -fx-background-color: linear-gradient(to bottom, #efefef, #eee);
+    -fx-border-color: linear-gradient(to bottom right, #449d6b, #633364);
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-border-width:1px;
+}
+.textfield:focused{
+    -fx-background-color:#fff;
+    -fx-border-width:1.8px;
+}
+.blu_bg{
+    -fx-background-color:linear-gradient(to bottom right, #f6f8f5, #8bf5d7);
+    -fx-border-radius: 8px;
+}
+.logout-btn{ -fx-cursor: hand; -fx-background-color: #2defd3; -fx-background-radius: 20px;}
+
+.logout-btn:hover{
+    -fx-background-color: #288e82;}
+.W_BG{
+    -fx-background-color:linear-gradient(to bottom right, #f6f8f5, #d3dbd9);
+    -fx-border-radius: 15px;
+}
+.delete_btn{
+    -fx-background-color:#832020 ;
+    -fx-background-radius: 8px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+}
+
+.delete_btn:hover{
+    -fx-background-color:#e10f0f ;
+}
+.add_btn{
+    -fx-background-color:#247be3 ;
+    -fx-background-radius: 8px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+}
+
+.add_btn:hover{
+    -fx-background-color:#29e7f8 ;
+}
+.clear_btn{
+    -fx-background-color:#832020 ;
+    -fx-background-radius: 8px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+}
+
+.clear_btn:hover{
+    -fx-background-color:#e10f0f ;
+}
+.update_btn{
+    -fx-background-color:#1b6844 ;
+    -fx-background-radius: 8px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+}
+
+.update_btn:hover{
+    -fx-background-color:#1ed07a ;
+}
+.textfield{
+    -fx-background-color: linear-gradient(to bottom, #efefef, #eee);
+    -fx-border-color: linear-gradient(to bottom right, #449d6b, #633364);
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-border-width:1px;
+}
+.textfield:focused{
+    -fx-background-color:#fff;
+    -fx-border-width:1.8px;
+}
+.search_btn{ -fx-cursor: hand; -fx-background-color:transparent; -fx-background-radius: 20px;}
+
+.search_btn:hover{
+    -fx-background-color: #dc3c5a;}
+.table_view{
+    -fx-background-color:transparent;
+    -fx-padding:0px;
+    -fx-border-color: linear-gradient(to bottom right, #449d6b, #633364) ;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+}
+.table_view.column-header-background{
+    -fx-background-color:linear-gradient(to bottom right, #449d6b, rgba(223, 41, 227, 0.81)) ;
+    -fx-background-insets: 0 0 0 0;
+}
+.center{
+    -fx-background-image:url("/sample/image/Trước_C1.png");
+    -fx-background-size: 100% 100%;
+}
